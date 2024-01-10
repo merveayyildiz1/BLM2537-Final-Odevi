@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/giris.css">
+    <title>Giriş Sayfası</title>
+</head>
+<body>
+<div class="main">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Giriş Yap</button>
+            <button type="button" class="toggle-btn" onclick="register()">Üye Ol</button>
+        </div>
+
+        <form id="Login" class="input-group">
+            <input type="text" class="input-field" placeholder="Kullanıcı Adı" required>
+            <input type="password" class="input-field" placeholder="Şifre" required>
+            <a href="#" class="forgot-password">Şifrenizi unuttunuz mu?</a>
+            <button type="button" onclick="window.location.href='anasayfa.html'" class="submit-btn">Giriş Yap</button>
+            
+        </form>
+        <form id="Register" class="input-group">
+            <input type="text" class="input-field" placeholder="Kullanıcı Adı" required>
+            <input type="email" class="input-field" placeholder="E-posta" required>
+            <input type="datetime-local" class="input-field" placeholder="Doğum Tarihi" required>
+            <input type="password" class="input-field" placeholder="Şifre" required>
+            <input type="password" class="input-field" placeholder="Şifre tekrar" required>
+            <button type="submit" class="submit-btn">Üye Ol</button>
+            
+        </form>
+    </div>
+</div>
+<script>
+    var x=document.getElementById("Login");
+    var z=document.getElementById("Register");
+    var y=document.getElementById("btn");
+
+    function register(){
+        x.style.left="-400px";
+        z.style.left="50px";
+        y.style.left="110px";
+    }
+
+    function login(){
+        x.style.left="50px";
+        z.style.left="450px";
+        y.style.left="0px";
+    }
+
+</script>
+</body>
+</html>

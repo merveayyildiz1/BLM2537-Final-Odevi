@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:hover {background-color:#fdf5e6;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:#341c04;
+  color:#f5deb3;
+}
+</style>
+</head>
+<body>
+  
+  <style>
+    body {
+      background-image: url(img/panel.jpg);
+    }
+    h1{
+      text-align: center;
+      margin-top:10px;
+      font-weight: bolder;
+      font-size: 40px;
+      color: #3b1903;
+  
+    }
+
+    form {
+            width: 350px;
+            margin: 8% auto;
+            padding: 20px;
+            background: #302104;
+            box-shadow: 0 0 20px 9px #673916;
+            border-radius: 35px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c200a; 
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cabea9;
+            margin-left: 15px;
+            font-size: 19px; 
+        }
+        input {
+            width: 80%;
+            padding: 15px;
+            margin: 10px 0;
+            background: transparent;
+            border-bottom: 2px solid rgba(116, 108, 98, 0.7); 
+            outline: none;
+            border-radius:15px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #c9bdaa;
+            margin-left:15px;
+        }
+
+        input::placeholder {
+            color: #d1c7ad;
+            font-size: 15px;
+        }
+
+        button {
+            width: 50%;
+            padding: 15px;
+            border: none;
+            background: linear-gradient(to right, #8e8169, #504a42);
+            font-weight: bold;
+            border-radius: 35px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #e2d5c6;
+            outline: none;
+            margin-top: 15px;
+            transition: 0.3s;
+            margin-left:80px;
+
+        }
+
+  
+  </style>
+
+<h1><i>Kullanıcılar</i></h1>
+
+<table id="customers">
+  <tr>
+    <th>Ad Soyad</th>
+    <th>Doğum Tarihi</th>
+    <th>E-posta</th>
+  </tr>
+
+  <tr>
+    <td>Merve Ayyıldız</td>
+    <td>31.05.2002</td>
+    <td>ayyildizzmerve1@gmail.com</td>
+  </tr>
+
+  <tr>
+    <td>Zehra Kar</td>
+    <td>23.09.2006</td>
+    <td>zehrakar@gmail.com</td>
+  </tr>
+
+  <tr>
+    <td>Nisa Demir</td>
+    <td>06.04.2001</td>
+    <td>demirr_nisa15@gmail.com</td>
+  </tr>
+
+  <tr>
+    <td>Ceren Çetin</td>
+    <td>02.02.2000</td>
+    <td>cerenncetin14@gmail.com</td>
+  </tr> 
+</table>
+
+<form id="userForm">
+  <label for="fullName">Ad Soyad</label>
+  <input type="text" id="fullName" name="fullName" required>
+
+  <label for="birthDate">Doğum Tarihi</label>
+  <input type="text" id="birthDate" name="birthDate" placeholder="GG.AA.YYYY" required>
+
+  <label for="email">E-Posta</label>
+  <input type="email" id="email" name="email" required>
+
+  <button type="button" id="addUserBtn" onclick="addUser()">Kullanıcı Ekle</button>
+</form>
+
+<script>
+  function addUser() {
+    var table = document.getElementById("customers");
+    var fullName = document.getElementById("fullName").value;
+    var birthDate = document.getElementById("birthDate").value;
+    var email = document.getElementById("email").value;
+
+    var newRow = table.insertRow(-1);
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+
+    cell1.innerHTML = fullName;
+    cell2.innerHTML = birthDate;
+    cell3.innerHTML = email;
+
+    document.getElementById("userForm").reset();
+  }
+
+  </script>
+
+</body>
+</html>
+

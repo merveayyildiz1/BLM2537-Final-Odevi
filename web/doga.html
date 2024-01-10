@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğa</title>
+    <style>
+        
+        .foto-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 10px; 
+        }
+        .foto-container img {
+            width: 100%; 
+            height: 90%;
+            border-radius: 7px;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        .modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%; 
+            max-height: 90%;
+            border-radius: 8px; 
+            object-fit: contain; /*resmi orantılı gösterir */
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            font-weight: bolder;
+            font-size: 50px;
+            color: #8B4513;
+        } 
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }             
+    </style>
+</head>
+
+<body bgcolor="#FFFAF0">
+    <h1><i>İşte doğanın göz alıcı anları..</i></h1> 
+    <div class="foto-container">
+        <img src="doga/doga1.jpg" alt="Foto 1" onclick="openModal('doga/doga1.jpg')">
+        <img src="doga/doga2.jpg" alt="Foto 1" onclick="openModal('doga/doga2.jpg')">
+        <img src="doga/doga3.jpg" alt="Foto 1" onclick="openModal('doga/doga3.jpg')">
+        <img src="doga/doga4.jpg" alt="Foto 1" onclick="openModal('doga/doga4.jpg')">
+        <img src="doga/doga5.jpg" alt="Foto 1" onclick="openModal('doga/doga5.jpg')">
+        <img src="doga/doga6.jpg" alt="Foto 1" onclick="openModal('doga/doga6.jpg')">
+        <img src="doga/doga7.jpg" alt="Foto 1" onclick="openModal('doga/doga7.jpg')">
+        <img src="doga/doga8.jpg" alt="Foto 1" onclick="openModal('doga/doga8.jpg')">
+        <img src="doga/doga9.jpg" alt="Foto 1" onclick="openModal('doga/doga9.jpg')">
+        <img src="doga/doga10.jpg" alt="Foto 1" onclick="openModal('doga/doga10.jpg')">
+        <img src="doga/doga11.jpg" alt="Foto 1" onclick="openModal('doga/doga11.jpg')">
+        <img src="doga/doga12.jpg" alt="Foto 1" onclick="openModal('doga/doga12.jpg')">
+        <img src="doga/doga13.jpg" alt="Foto 1" onclick="openModal('doga/doga13.jpg')">
+        <img src="doga/doga14.jpg" alt="Foto 1" onclick="openModal('doga/doga14.jpg')">
+        <img src="doga/doga15.jpg" alt="Foto 1" onclick="openModal('doga/doga15.jpg')">
+        <img src="doga/doga16.jpg" alt="Foto 1" onclick="openModal('doga/doga16.jpg')">
+        <img src="doga/doga17.jpg" alt="Foto 1" onclick="openModal('doga/doga17.jpg')">
+        <img src="doga/doga18.jpg" alt="Foto 1" onclick="openModal('doga/doga18.jpg')"> 
+    </div> 
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanat</title>
+    <style>
+        
+        .foto-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 10px; 
+        }
+        .foto-container img {
+            width: 100%; 
+            height: 90%;
+            border-radius: 7px;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        .modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%; 
+            max-height: 90%;
+            border-radius: 8px; 
+            object-fit: contain;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            font-weight: bolder;
+            font-size: 50px;
+            color: #8B4513;
+        }       
+    </style>
+</head>
+<body bgcolor="#FFFAF0">
+    <h1><i>Sanata göz atalım..</i></h1>
+    
+    <div class="foto-container">
+     
+        <img src="sanat/1.jpg" alt="Foto 1" onclick="openModal('sanat/1.jpg')">
+        <img src="sanat/2.jpg" alt="Foto 1" onclick="openModal('sanat/2.jpg')">
+        <img src="sanat/3.jpg" alt="Foto 1" onclick="openModal('sanat/3.jpg')">
+        <img src="sanat/4.jpg" alt="Foto 1" onclick="openModal('sanat/4.jpg')">
+        <img src="sanat/14.jpg" alt="Foto 1" onclick="openModal('sanat/5.jpg')">
+        <img src="sanat/6.jpg" alt="Foto 1" onclick="openModal('sanat/6.jpg')">
+        <img src="sanat/10.jpg" alt="Foto 1" onclick="openModal('sanat7.jpg')">
+        <img src="sanat/8.jpg" alt="Foto 1" onclick="openModal('sanat/8.jpg')">
+        <img src="sanat/9.jpg" alt="Foto 1" onclick="openModal('sanat/9.jpg')">
+        <img src="sanat/7.jpg" alt="Foto 1" onclick="openModal('sanat/10.jpg')">
+        <img src="sanat/11.jpg" alt="Foto 1" onclick="openModal('sanat/11.jpg')">
+        <img src="sanat/12.jpg" alt="Foto 1" onclick="openModal('sanat/12.jpg')">
+        <img src="sanat/13.jpg" alt="Foto 1" onclick="openModal('sanat/13.jpg')">
+        <img src="sanat/5.jpg" alt="Foto 1" onclick="openModal('sanat/14.jpg')">
+        <img src="sanat/15.jpg" alt="Foto 1" onclick="openModal('sanat/15.jpg')">
+        <img src="sanat/16.jpg" alt="Foto 1" onclick="openModal('sanat/16.jpg')">
+        <img src="sanat/17.jpg" alt="Foto 1" onclick="openModal('sanat/17.jpg')">
+        <img src="sanat/18.jpg" alt="Foto 1" onclick="openModal('sanat/18.jpg')">
+    </div> 
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <script src="script.js"></script>  
+</body>
+</html>

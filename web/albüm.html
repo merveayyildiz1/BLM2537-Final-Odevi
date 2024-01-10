@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoğraf Albümü</title>
+    <style>
+        
+        .foto-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 10px; 
+        }
+        .foto-container img {
+            width: 100%; 
+            height: 90%;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%; 
+            max-height: 90%;
+            border-radius: 8px; 
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            font-weight: bolder;
+            font-size: 50px;
+            color: #8B4513;
+        }
+    </style>
+</head>
+
+<body bgcolor="#FFFAF0">
+
+    <h1><i>İşte albümünüz..</i></h1>
+    <div class="foto-container">
+        <img src="albumfoto/1.jpg" alt="Foto 1" onclick="openModal('albumfoto/1.jpg')">
+        <img src="albumfoto/2.jpg" alt="Foto 1" onclick="openModal('albumfoto/2.jpg')">
+        <img src="albumfoto/3.jpg" alt="Foto 1" onclick="openModal('albumfoto/3.jpg')">
+        <img src="albumfoto/4.jpg" alt="Foto 1" onclick="openModal('albumfoto/4.jpg')">
+        <img src="albumfoto/5.jpg" alt="Foto 1" onclick="openModal('albumfoto/5.jpg')">
+        <img src="albumfoto/6.jpg" alt="Foto 1" onclick="openModal('albumfoto/6.jpg')">
+        <img src="albumfoto/7.jpg" alt="Foto 1" onclick="openModal('albumfoto/7.jpg')">
+        <img src="albumfoto/8.jpg" alt="Foto 1" onclick="openModal('albumfoto/8.jpg')">
+        <img src="albumfoto/9.jpg" alt="Foto 1" onclick="openModal('albumfoto/9.jpg')">
+        <img src="albumfoto/10.jpg" alt="Foto 1" onclick="openModal('albumfoto/10.jpg')">
+        <img src="albumfoto/11.jpg" alt="Foto 1" onclick="openModal('albumfoto/11.jpg')">
+        <img src="albumfoto/12.jpg" alt="Foto 1" onclick="openModal('albumfoto/12.jpg')">
+        <img src="albumfoto/13.jpg" alt="Foto 1" onclick="openModal('albumfoto/13.jpg')">
+        <img src="albumfoto/14.jpg" alt="Foto 1" onclick="openModal('albumfoto/14.jpg')">
+        <img src="albumfoto/15.jpg" alt="Foto 1" onclick="openModal('albumfoto/15.jpg')">
+        <img src="albumfoto/16.jpg" alt="Foto 1" onclick="openModal('albumfoto/16.jpg')">
+        <img src="albumfoto/17.jpg" alt="Foto 1" onclick="openModal('albumfoto/17.jpg')">
+        <img src="albumfoto/18.jpg" alt="Foto 1" onclick="openModal('albumfoto/18.jpg')">
+        <img src="albumfoto/19.jpg" alt="Foto 1" onclick="openModal('albumfoto/19.jpg')">
+        <img src="albumfoto/20.jpg" alt="Foto 1" onclick="openModal('albumfoto/20.jpg')">
+        <img src="albumfoto/21.jpg" alt="Foto 1" onclick="openModal('albumfoto/21.jpg')">
+        <img src="albumfoto/22.jpg" alt="Foto 1" onclick="openModal('albumfoto/22.jpg')">
+        <img src="albumfoto/23.jpg" alt="Foto 1" onclick="openModal('albumfoto/23.jpg')">
+        <img src="albumfoto/24.jpg" alt="Foto 1" onclick="openModal('albumfoto/24.jpg')">   
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
